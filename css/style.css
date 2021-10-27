@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --primarycolor: #000;
+    --secondarycolor: #fff;
+    
+}
+
+html.dark{
+   --primarycolor:#fff;
+    --secondarycolor: #000;
+}
+
+html.dark{
+    background-color: #000;
+    color:var(--primarycolor);
+}
+
+
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+button{
+    background-color: transparent;
+    border:none;
+
+    position: absolute;
+    top:1rem;
+    left:1rem;
+    cursor: pointer;
+
+}
+
+
+.fa-moon{
+    color: darkblue;
+}
+
+.fa-sun{
+    color: yellow;
+}
+
+
+.testicontainer{
+    width: 600px;
+    /* background-color: red; */
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.testi{
+    color:var(--primarycolor);
+    letter-spacing: 10px;
+
+    position: absolute;
+    top:40%;
+    left:0;
+
+    transform: translate(-60%) rotate(90deg);
+}
+
+
+.imagebox{
+    width: 600px;
+    height: 300px;
+
+    position:relative;
+}
+
+
+.imagebox::before{
+    content: '';
+    width:100%;
+    height: 100px;
+    background-color: blue;
+    mix-blend-mode: multiply;
+
+    position: absolute;
+    top:55.2%;
+    left:0;
+
+}
+
+.imagebox img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+    object-fit: cover;
+}
+
+
+
+
+.textbox h2{
+    margin-left: 25px;
+}
+
+
+.textbox .commend{
+    background-color: var(--primarycolor);
+    color: var(--secondarycolor);
+    padding: 20px 30px;
+
+}
+
+.commend p{
+    text-align: justify;
+}
+
+
+.commend{
+    position:relative;
+}
+
+
+.commend .quote{
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+
+
+.count{
+    font-size: 40px;
+
+    animation:myani 10s linear infinite;
+}
+
+
+@keyframes myani{
+    0%{
+        /* transform: translate(0) rotate(0); */
+        transform: translate(0);
+        opacity: 1;
+        
+        /* transform:rotate(0); */
+    }
+
+
+    100%{
+        /* transform: translate(-100%) rotate(-360deg); */
+        transform: translate(-100%);
+        opacity: 0;
+
+        /* transform:rotate(-360deg); */
+    }
+}
